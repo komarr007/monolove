@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+    <body>
+    <!-- protect section start -->
+        <div class="protect_section layout_padding">
+            <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="protect_taital">Fill the Form</h1>
+                    <p class="protect_text">Most of this form using scale from 1-10 as 1 for not interest and 10 for freaking fucking interest</p>
+                </div>
+            </div>
+            <div class="protect_section_2 layout_padding">
+                <div class="row">
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ love_tester_form.as_div }}
+                        <button type="submit" value="Submit" name="lovetester_submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+            </div>
+        </div>
+    <!-- protect section end -->    
+ 
+        <div class="menu"></div>
+
+        <script>
+            $(".menu-activator").on("click", function() {
+            $("body").toggleClass("menu-active");
+            });
+        </script>
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/popper.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+        {% comment %} <script src="{% static 'js/plugin.js' %}"></script> {% endcomment %}
+        <!-- sidebar -->
+        <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+        <!-- javascript --> 
+        <script src="{% static 'js/owl.carousel.js' %}"></script>
+        <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+        <script>
+            function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+            }
+            function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+            }
+        </script>
+    </body>
+{% endblock %}
