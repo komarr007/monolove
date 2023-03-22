@@ -10,7 +10,7 @@
 
 Current web app only can predict if you probably match or no using [speed dating data](https://www.kaggle.com/datasets/annavictoria/speed-dating-experiment) this web app on v1 version.
 
-## Put Anyother feature that You Want
+## Put Any Other feature that You Want
 
 > Feel free to contribute here.
 
